@@ -1,0 +1,17 @@
+.venv
+venv
+__pycache__
+
+db.sqlite3
+
+# environment variables
+.env
+.env.local
+.env.*.local
+*.log
+.log
+
+# Ignore migrations
+trandlator/migrations/
+
+debug.log

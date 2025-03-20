@@ -1,0 +1,13 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 1280px;
+  }
+}
+
+:root {
+  font-family: "Poppins", "Inter", sans-serif;
+}

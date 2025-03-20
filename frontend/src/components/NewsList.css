@@ -1,0 +1,35 @@
+.news-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.ticker-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ticker-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 6rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #1a412c;
+    color: white;
+}
+
+.ticker-title-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.ticker-title-stock {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    font-size: large;
+    padding: 0.5rem;
+}

@@ -1,0 +1,15 @@
+djangorestframework
+playwright
+django-cors-headers
+selenium
+webdriver-manager
+requests
+python-dotenv
+djangorestframework-simplejwt
+
+python-decouple
+yfinance
+
+django-apscheduler
+langchain_openai
+
