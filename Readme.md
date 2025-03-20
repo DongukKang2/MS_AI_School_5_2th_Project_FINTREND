@@ -2,8 +2,8 @@
 
 ## 📋 프로젝트 개요
 - **프로젝트명**: FINTREND - 해외 주식 투자자 맞춤형 웹 페이지 및 이메일 서비스
-- **개발 기간**: 2024년 12월 12일 ~ 2024년 12월 24일 (13일간)
-- **팀원**: 강동욱 외 8명
+- **개발 기간**: 2024년 Microsoft AI School 5기 2차 프로젝트
+- **팀원**: 강동욱, 김경민, 김령현, 강찬영, 이재이, 최연희 외 3명
 
 ## 💡 프로젝트 소개
 해외 주식 투자자에게 도움을 주는 AI 기반 고객 맞춤형 웹 페이지 및 이메일 서비스입니다.
@@ -92,42 +92,53 @@
 
 ## 🚀 시작하기
 
-### 필수 요구사항
-- Python 3.8+
-- Node.js 14+
-- Azure 계정
-
-### 설치 방법
-1. 저장소 클론
+### Frontend 실행
 ```bash
-git clone https://github.com/DongukKang2/MS_AI_School_5_2th_Project_FINTREND.git
+cd frontend
+npm run dev
 ```
 
-2. 패키지 설치
+### Backend 실행
+#### 환경 설정
 ```bash
-# 백엔드 설치
+# 가상 환경 생성
+python -m venv venv
+
+# 가상 환경 실행
+# Windows
+venv\Scripts\activate
+# Linux/macOS
+source venv/bin/activate
+
+# 필요한 라이브러리 설치
 pip install -r requirements.txt
-
-# 프론트엔드 설치
-cd frontend
-npm install
 ```
 
-3. 환경 변수 설정
+#### 데이터베이스 설정
 ```bash
-# .env 파일 생성
-cp .env.example .env
-# Azure 및 기타 API 키 설정
-```
+# 데이터베이스 마이그레이션
+python manage.py makemigrations
+python manage.py migrate
 
-4. 실행
-```bash
-# 백엔드 실행
+# 서버 실행
 python manage.py runserver
+```
 
-# 프론트엔드 실행
-cd frontend
-npm start
+#### Django 관리자 페이지
+```bash
+# 관리자 계정 생성
+python manage.py createsuperuser
+
+# [host]/admin 접속하여 관리자 페이지 이용
+```
+
+#### OpenAI 및 크롤링 설정
+```bash
+# .env 파일 설정
+# 팀즈에서 env 파일을 다운받아 프로젝트 루트 폴더에 .env로 저장
+
+# 크롤링 실행
+python crawling/automate_crawling.py
 ```
 
 ## 📞 문의하기
